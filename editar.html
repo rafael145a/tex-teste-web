@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tex Tecnologia - Editar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- menu -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://textecnologia.com.br" target="_blank">Tex Tecnologia - Teste</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="usuarios.html">Usuários</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class='container-fluid'>
+            <h3 class="well">Editar usuário: <span id="user"></span> </h3>
+            <div class='col-md-4'></div>
+            <div class='col-md-4 panel panel-default'>
+                <form>
+                    <div class="form-group">
+                        <label for='primeiro-nome'>*Primeiro nome:</label>
+                        <input type='text' class='form-control' id="primeiro-nome" required="true"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='segundo-nome'>*Último nome:</label>
+                        <input type='text' class='form-control' id="segundo-nome" required="true"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='login'>*Login:</label>
+                        <input type='text' class='form-control' id="login" required="true"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='telefone'>Telefone: </label>
+                        <input type='text' class='form-control' id="telefone"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='endereco'>Endereço: </label>
+                        <input type='text' class='form-control' id="endereco"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='email'>*Email: </label>
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="text" class="form-control" id="email" required="true" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for='uf'>UF: </label>
+                        <select name="uf" id="uf" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado-civil">Estado Civil:</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="estado-civil" id="inlineRadio1" value="casado"> Casado(a)
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="estado-civil" id="inlineRadio2" value="divorciado"> Divorciado(a)
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="estado-civil" id="inlineRadio3" value="solteiro"> Solteiro(a)
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <select id="status" class="form-control" multiple>
+                            <option value="1">Ativo</option>
+                            <option value="0">Inativo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group btn-group dropup">
+                        <button type="button" class="btn btn-success">Salvar</button>
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-toggle="modal" data-target="#modal-confirm">Deletar</a></li>
+                            <li><a href="usuarios.html">Cancelar</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" data-toggle="modal" data-target="#modal-senha">Alterar Senha</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>  
+        </div>
+        <!-- Modal de confirmacao -->
+        <div class="modal fade" id="modal-confirm" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Deletar "<span id="titulo-modal"></span>" ?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tem certeza que deseja deletar o registro acima?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="alert('Registro excluído com sucesso!')"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Sim</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Não</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal de senha -->
+        <div class="modal fade" id="modal-senha" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Nova senha de "<span id="titulo-modal-senha"></span>" ?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="password" placeholder="Digite a nova senha" class="form-control"/><br/>
+                            <input type="password" placeholder="Confirme a nova senha" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="alert('Nova senha cadastrada com sucesso!')"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Alterar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="jquery-1.11.3.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+                            function selecionar(status)
+                            {
+                                var combo = document.getElementById("status");
+
+                                for (var i = 0; i < combo.options.length; i++)
+                                {
+                                    if (combo.options[i].value == status)
+                                    {
+                                        combo.options[i].selected = "true";
+                                        break;
+                                    }
+                                }
+                            }
+                            var url = window.location.search.replace("?", "");
+                            var items = url.split("&");
+
+                            var array = {
+                                'nome': items[0]
+                            }
+                            items = array.nome.split("=");
+                            var dados = {
+                                'nome': items[1]
+                            }
+                            document.getElementById("primeiro-nome").value = dados.nome;
+                            document.getElementById("user").innerHTML = dados.nome;
+                            document.getElementById("titulo-modal").innerHTML = dados.nome;
+                            document.getElementById("titulo-modal-senha").innerHTML = dados.nome;
+                            if (dados.nome === "Rafael") {
+                                document.getElementById("segundo-nome").value = "Marreca";
+                                document.getElementById("login").value = "rafael.marreca";
+                                document.getElementById("telefone").value = "(11) 9 7981-7235";
+                                document.getElementById("email").value = "rafael145a@gmail.com";
+                                document.getElementById("endereco").value = "Rua Jandaia do Sul, 656";
+                                selecionar(1);
+                            } else {
+                                if (dados.nome === "Maria") {
+                                    document.getElementById("segundo-nome").value = "Silva";
+                                    document.getElementById("login").value = "maria.silva";
+                                    document.getElementById("telefone").value = "(11) 9 9999-9999";
+                                    document.getElementById("email").value = "mariasilva@gmail.com";
+                                    document.getElementById("endereco").value = "Rua José Bezerra, 333";
+                                    selecionar(0);
+                                } else {
+                                    if (dados.nome === "Jose") {
+                                        document.getElementById("segundo-nome").value = "Sousa";
+                                        document.getElementById("login").value = "jose.sousa";
+                                        document.getElementById("telefone").value = "(11) 9 8888-8888";
+                                        document.getElementById("email").value = "jose.sousa@gmail.com";
+                                        document.getElementById("endereco").value = "Rua Astorga, 1253";
+                                        selecionar(1);
+                                    }
+                                }
+                            }
+        </script>
+    </body>
+</html>

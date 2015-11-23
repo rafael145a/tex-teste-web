@@ -1,0 +1,27 @@
+body
+{
+    //background-color:#eeeeee;
+}
+
+#formulario{
+     position:absolute;
+     top:30%;
+
+}
+
+#form-login{
+    border-radius:8px;
+    padding:10px;
+    background-color:#fff;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+
+table a{
+    text-decoration: none;
+    color: #000;
+}
+
+table a:visited{
+    text-decoration: none;
+    color: #000;
+}
